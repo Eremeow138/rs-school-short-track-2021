@@ -13,8 +13,22 @@
  * the output should be ["file", "file(1)", "image", "file(1)(1)", "file(2)"]
  *
  */
-function renameFiles(/* names */) {
-  throw new Error('Not implemented');
+function renameFiles(names) {
+  for (let index = 0; index < names.length; index++) {
+    const dublicats = names.filter((elem) => elem === names[index]);
+    for (let i = 1; i < dublicats.length; i++) {
+      dublicats[i] += `(${i})`;
+    }
+    let counter = 0;
+    for (let i = 0; i < names.length; i++) {
+      if (names[i] === names[index]) {
+        // eslint-disable-next-line no-param-reassign
+        names[i] = dublicats[counter];
+        counter++;
+      }
+    }
+  }
+  return names;
 }
 
 module.exports = renameFiles;
