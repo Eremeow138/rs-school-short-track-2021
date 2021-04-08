@@ -1,7 +1,7 @@
 # The Rolling Scopes School. Short Track 2021.
 
 ## Task
-The task is to solve the challenges and pass the tasks with flying colors. There are fifteen modules with different tasks. 
+The task is to solve the challenges and pass the tasks with flying colors. There are fifteen modules with different tasks.
 Hope you will enjoy it!
 
 **Active usage of [documentation](https://developer.mozilla.org/en-US/) is strongly recommended!**
@@ -34,7 +34,7 @@ Hope you will enjoy it!
 
     Remove the throwing error line from function body:
     ```javascript
-        throw new Error('Not implemented'); 
+        throw new Error('Not implemented');
     ```
     Implement the function by any way and verify your solution by running tests until the failed test become passed (green).
 8. Run `npm test` in command line. If everything is OK you can try to resolve the next task.
@@ -42,7 +42,7 @@ Hope you will enjoy it!
 
 ## Submit to [rs app](https://app.rs.school/)
 1. Open [rs app](https://app.rs.school/) and login
-2. Go to [submit task page](https://app.rs.school/course/submit-task)
+2. Go to [submit task page](https://app.rs.school/course/student/auto-test?course=js-fe-2021Q1)
 3. Select your task (Short Track 2021)
 4. Press submit button and enjoy
 
@@ -63,7 +63,7 @@ https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
 - Finally, you need to apply linter's autofix feature in order to fix all linebreaks that was already changed to "CLRF":
 ```
 $ npm run lint -- --fix
-``` 
+```
 
 ___
 The task based on https://github.com/rolling-scopes-school/js-assignments.
