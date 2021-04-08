@@ -21,23 +21,20 @@ function removeKFromList(l, k) {
   // throw new Error('Not implemented');
   function deleteNodes(list, elem) {
     //  head
-    if (list.value === elem) {
-      // eslint-disable-next-line no-param-reassign
-      list.value = list.next.value;
-      // eslint-disable-next-line no-param-reassign
-      list.next = list.next.next;
+    const node = list;
+    if (node.value === elem) {
+      node.value = node.next.value;
+      node.next = node.next.next;
     }
-    if (list.next) {
-      if (list.next.value === elem && list.next.next) {
-        // eslint-disable-next-line no-param-reassign
-        list.next = list.next.next;
-      } else if (list.next.value === elem && !list.next.next) {
-        // eslint-disable-next-line no-param-reassign
-        list.next = null;
+    if (node.next) {
+      if (node.next.value === elem && node.next.next) {
+        node.next = node.next.next;
+      } else if (node.next.value === elem && !node.next.next) {
+        node.next = null;
       }
     }
-    if (list.next) {
-      deleteNodes(list.next, elem); // делаем то же самое для остальной части списка
+    if (node.next) {
+      deleteNodes(node.next, elem); // делаем то же самое для остальной части списка
     }
   }
   deleteNodes(l, k);
