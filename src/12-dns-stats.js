@@ -20,8 +20,23 @@
  * }
  *
  */
-function getDNSStats(/* domains */) {
-  throw new Error('Not implemented');
+function getDNSStats(domains) {
+  // throw new Error('Not implemented');
+  const stats = {};
+  const reversDomains = domains.map((item) => item.split('.').reverse());
+  reversDomains.forEach((item) => {
+    let concat = '';
+    item.forEach((itm) => {
+      concat = `${concat}.${itm}`;
+      if (stats[concat]) {
+        stats[concat]++;
+      } else {
+        stats[concat] = 1;
+      }
+    });
+    concat = '';
+  });
+  return stats;
 }
 
 module.exports = getDNSStats;
